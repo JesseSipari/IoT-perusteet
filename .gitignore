@@ -1,0 +1,10 @@
+node_modules/
+firmware/
+elf/
+.idea/
+__pycache__/
+*.pyc
+.vscode/
+.wokwi/
+package-lock.json
+package.json
