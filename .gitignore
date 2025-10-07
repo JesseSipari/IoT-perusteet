@@ -4,6 +4,7 @@ elf/
 .idea/
 __pycache__/
 *.pyc
+.env
 .vscode/
 .wokwi/
 package-lock.json

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IoT Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root { --card-w: 1000px; }
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 24px;
+      background: #fafafa;
+    }
+    .card {
+      max-width: var(--card-w);
+      margin: auto;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    label { font-size: 14px; color: #444; }
+    input, button { padding: 6px 10px; font-size: 14px; }
+    button {
+      background: #0055cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover { background: #0044aa; }
+    #status { font-size: 14px; color: #666; }
+    h1 { margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Room Temperature & Humidity Dashboard</h1>
+
+    <div class="row">
+      <label>Channel ID</label>
+      <input id="channelId" value="3079297" size="10" />
+      <label>Results</label>
+      <input id="results" value="10" size="4" />
+      <button id="reload">Fetch Now</button>
+      <span id="status"></span>
+    </div>
+
+    <canvas id="chart" height="120"></canvas>
+    <p id="latest"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
