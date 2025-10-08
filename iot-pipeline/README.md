@@ -55,9 +55,7 @@ iot-pipeline/
    ```env
    PORT=3000
    CHANNEL_ID=<your_channel_id>
-   READ_API_KEY=<your_thingspeak_read_key_or_empty_if_public>
-   # Optional:
-   WRITE_API_KEY=<your_thingspeak_write_key_for_device>
+   READ_API_KEY=<your_thingspeak_api_key>
    ```
 
 4. Install dependencies and start the backend:
